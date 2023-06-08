@@ -1,0 +1,20 @@
+{
+  "name": "2fa-image-to-code",
+  "productName": "2fa-image-to-code",
+  "version": "1.0.0",
+  "description": "2fa-image-to-code",
+  "main": "src/index.js",
+  "scripts": {},
+  "keywords": [],
+  "type": "module",
+  "author": {
+    "name": "Abramov Oleg ",
+    "email": "olegstan1@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "jimp": "^0.22.8",
+    "jsqr": "^1.4.0",
+    "speakeasy": "^2.0.0"
+  }
+}
