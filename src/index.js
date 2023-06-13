@@ -6,7 +6,6 @@ import path from 'path';
 
 var imgPath = '';
 
-var __dirname = fs.realpathSync('.');
 // var imgPath = __dirname + '\\example\\img'
 
 process.argv.slice(2).forEach(function (val, index, array)
