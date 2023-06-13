@@ -16,7 +16,7 @@ process.argv.slice(2).forEach(function (val, index, array)
 {
     if(imgPath === '')
     {
-        imgPath = __dirname + path.sep + 'example' + path.sep + val.toString();
+        imgPath = __dirname + path.sep + '..' + path.sep + 'example' + path.sep + val.toString();
     }
 });
 
