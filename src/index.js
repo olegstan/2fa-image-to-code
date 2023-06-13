@@ -2,6 +2,7 @@ import jsQR from 'jsqr';
 import Jimp from 'jimp';
 import speakeasy from 'speakeasy';
 import fs from 'fs';
+import path from 'path';
 
 var imgPath = '';
 
@@ -10,7 +11,7 @@ var __dirname = fs.realpathSync('.');
 
 process.argv.slice(2).forEach(function (val, index, array)
 {
-    imgPath = __dirname + '\\example\\' + val.toString();
+    imgPath = __dirname + path.sep + 'example' + path.sep + val.toString();
 });
 
 (async () => {
