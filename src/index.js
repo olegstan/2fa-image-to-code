@@ -3,9 +3,13 @@ import Jimp from 'jimp';
 import speakeasy from 'speakeasy';
 import fs from 'fs';
 import path from 'path';
+import {fileURLToPath} from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 
 var imgPath = '';
-
 // var imgPath = __dirname + '\\example\\img'
 
 process.argv.slice(2).forEach(function (val, index, array)
