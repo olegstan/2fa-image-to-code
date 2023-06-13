@@ -11,7 +11,10 @@ var __dirname = fs.realpathSync('.');
 
 process.argv.slice(2).forEach(function (val, index, array)
 {
-    imgPath = __dirname + path.sep + 'example' + path.sep + val.toString();
+    if(imgPath === '')
+    {
+        imgPath = __dirname + path.sep + 'example' + path.sep + val.toString();
+    }
 });
 
 (async () => {
