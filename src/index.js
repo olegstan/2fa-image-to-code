@@ -5,15 +5,12 @@ import fs from 'fs';
 
 var imgPath = '';
 
-// var __dirname = fs.realpathSync('.');
+var __dirname = fs.realpathSync('.');
 // var imgPath = __dirname + '\\example\\img'
 
-process.argv.slice(2).forEach(function (val, index, array) {
-    let parts = val.toString().split('=');
-
-    if (parts[0] === 'img') {
-        imgPath = parts[1];
-    }
+process.argv.slice(2).forEach(function (val, index, array)
+{
+    imgPath = __dirname + '\\example\\' + val.toString();
 });
 
 (async () => {

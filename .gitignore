@@ -4,8 +4,10 @@
 #     https://www.atlassian.com/git/tutorials/saving-changes/gitignore
 
 # Node artifact files
+example/
 node_modules/
 dist/
+.idea/
 src/old/*
 
 /settings.js
