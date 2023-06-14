@@ -20,8 +20,16 @@ process.argv.slice(2).forEach(function (val, index, array)
     }
 });
 
+function readImageAsBase64(filePath) {
+    const imageBuffer = fs.readFileSync(filePath);
+
+    const base64Image = imageBuffer.toString('base64');
+
+    return  base64Image.replace(/^data:image\/\w+;base64,/, '');
+}
+
 (async () => {
-    var img = fs.readFileSync(imgPath, 'utf8');
+    var img = readImageAsBase64(imgPath);
 
     Jimp.read(new Buffer.from(img, 'base64'), async function(err, image) {
         const value = jsQR(image.bitmap.data, image.bitmap.width, image.bitmap.height);
